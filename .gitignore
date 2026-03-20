@@ -1,3 +1,11 @@
+<<<<<<< HEAD
 .terraform/
 *.tfstate
 *.tfstate.backup
+=======
+terraform/.terraform/
+terraform/*.tfstate
+terraform/*.tfstate.backup
+*.log
+__pycache__/
+>>>>>>> 173fb86ee44ee6a5c46e759aa0f85925ffb19e52
