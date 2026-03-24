@@ -64,8 +64,14 @@ jobs:
           key: ${{ secrets.EC2_KEY }}
           script: |
             echo "Connected"
+
+            export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
+
             cd devops-project || git clone https://github.com/salmaelouarrate/devops-project.git
             cd devops-project
             git pull
+
             sudo kubectl apply -f k8s/deployment.yaml
             sudo kubectl apply -f k8s/service.yaml
+
+            sudo kubectl get pods
