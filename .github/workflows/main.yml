@@ -66,5 +66,6 @@ jobs:
             echo "Connected"
             cd devops-project || git clone https://github.com/salmaelouarrate/devops-project.git
             cd devops-project
-            kubectl apply -f k8s/deployment.yaml
-            kubectl apply -f k8s/service.yaml
+            git pull
+            sudo kubectl apply -f k8s/deployment.yaml
+            sudo kubectl apply -f k8s/service.yaml
